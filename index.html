@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Amo Adjei - Data Entry Specialist & Virtual Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfc;
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+        }
+        .hero-bg {
+            background-color: #f4f1de;
+        }
+        .accent-color {
+            color: #e07a5f;
+        }
+        .accent-bg {
+            background-color: #e07a5f;
+        }
+        .primary-color {
+            color: #3d405b;
+        }
+        .primary-bg {
+            background-color: #3d405b;
+        }
+        .secondary-color {
+            color: #81b29a;
+        }
+        .secondary-bg {
+            background-color: #81b29a;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e07a5f;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold primary-color">Samuel Amo Adjei</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-gray-600 hover:accent-color font-medium">About</a>
+                <a href="#services" class="nav-link text-gray-600 hover:accent-color font-medium">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-600 hover:accent-color font-medium">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:accent-color font-medium">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block accent-bg hover:opacity-90 text-white font-bold py-2 px-4 rounded-full transition-opacity">Hire Me</a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl primary-color">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block text-gray-600 hover:accent-color py-2">About</a>
+            <a href="#services" class="block text-gray-600 hover:accent-color py-2">Services</a>
+            <a href="#portfolio" class="block text-gray-600 hover:accent-color py-2">Portfolio</a>
+            <a href="#contact" class="block text-gray-600 hover:accent-color py-2">Contact</a>
+            <a href="#contact" class="block accent-bg text-white text-center font-bold py-2 px-4 rounded-full mt-2">Hire Me</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold primary-color leading-tight mb-4">
+                        Bringing Clarity to Your Data
+                    </h1>
+                    <p id="typing-effect" class="text-xl text-gray-600 mb-8 h-7"></p>
+                    <a href="#portfolio" class="accent-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-full text-lg transition-opacity">View My Work</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-4 rounded-2xl shadow-xl transform rotate-3">
+                         <img src="https://placehold.co/600x400/81B29A/FFFFFF?text=Samuel+Amo+Adjei" alt="Samuel Amo Adjei Professional Headshot" class="rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold primary-color">About Me</h2>
+                    <p class="text-lg text-gray-500 mt-2">Your dedicated partner in data management and administrative support.</p>
+                </div>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
+                    <p>
+                        I'm a detail-oriented Virtual Assistant specializing in data entry and management. My passion is transforming disorganized information into clean, actionable data that empowers business owners to save time and make smarter decisions. I pride myself on my accuracy, efficiency, and unwavering commitment to confidentiality. My goal is simple: to handle your data-intensive tasks so you can focus on growing your business.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-gray-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold primary-color">Services</h2>
+                    <p class="text-lg text-gray-500 mt-2">How I can help you streamline your operations.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+                        <div class="text-4xl secondary-color mb-4">🗂️</div>
+                        <h3 class="text-2xl font-bold mb-2 primary-color">Data Entry & Cleanup</h3>
+                        <p class="text-gray-600">Accurate entry from various sources (PDFs, websites, scanned docs). I also clean and format existing datasets to ensure consistency and remove errors.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+                        <div class="text-4xl secondary-color mb-4">📊</div>
+                        <h3 class="text-2xl font-bold mb-2 primary-color">Spreadsheet Management</h3>
+                        <p class="text-gray-600">Expert in MS Excel and Google Sheets. I create custom spreadsheets, manage complex data, and apply formulas for insightful analysis.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+                        <div class="text-4xl secondary-color mb-4">🔍</div>
+                        <h3 class="text-2xl font-bold mb-2 primary-color">Web Research</h3>
+                        <p class="text-gray-600">Efficiently gathering and compiling information from the web for lead generation, market research, or contact list building.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold primary-color">Skills & Software Proficiency</h2>
+                    <p class="text-lg text-gray-500 mt-2">The tools and talents I use to deliver exceptional results.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-gray-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold primary-color">Portfolio Showcase</h2>
+                    <p class="text-lg text-gray-500 mt-2">Demonstrating the impact of clean data.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Portfolio Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/f4f1de/3d405b?text=Before+%26+After" alt="Data Cleaning Project" class="rounded-md mb-4 w-full">
+                        <h3 class="text-2xl font-bold mb-2 primary-color">Real Estate Lead List Cleanup</h3>
+                        <p class="text-gray-600">
+                            <strong>Before:</strong> The client had a 1,000+ entry spreadsheet with inconsistent formatting, duplicates, and missing information, making it unusable for their CRM.
+                            <br><br>
+                            <strong>After:</strong> I standardized formats, removed 150+ duplicates, verified contact information, and delivered a clean, CRM-ready file. This increased their marketing outreach efficiency by 40%.
+                        </p>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/f4f1de/3d405b?text=Project+Showcase" alt="E-commerce Product Listing" class="rounded-md mb-4 w-full">
+                        <h3 class="text-2xl font-bold mb-2 primary-color">E-commerce Product Data Entry</h3>
+                        <p class="text-gray-600">
+                            <strong>Task:</strong> Manually enter 500 new products into a Shopify store from a supplier's PDF catalog, including titles, descriptions, pricing, and image URLs.
+                            <br><br>
+                            <strong>Result:</strong> All 500 products were entered with 100% accuracy within the 48-hour deadline. The consistent and detailed descriptions contributed to a 15% increase in product page conversions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-5xl accent-color mb-4">”</div>
+                    <p class="text-2xl italic text-gray-700 leading-relaxed">
+                        "Samuel is an absolute lifesaver. His speed and accuracy are phenomenal. She transformed our chaotic data into a valuable asset. I can't recommend her highly enough!"
+                    </p>
+                    <p class="mt-6 font-bold text-lg primary-color">John Carter</p>
+                    <p class="text-gray-500">Founder, Carter Consulting</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="hero-bg py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold primary-color">Ready to Get Organized?</h2>
+                <p class="text-xl text-gray-600 my-4 max-w-2xl mx-auto">Let's discuss how I can help you reclaim your time and bring order to your data. I'm currently available for new projects and would love to hear about your needs.</p>
+                <a href="mailto:samuel.amo.adjei.va@example.com" class="accent-bg hover:opacity-90 text-white font-bold py-4 px-10 rounded-full text-lg transition-opacity inline-block">
+                    samuel.amo.adjei.va@example.com
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Samuel Amo Adjei. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Typing effect
+            const typingText = document.getElementById('typing-effect');
+            const textToType = "Data Entry Specialist | Virtual Assistant";
+            let index = 0;
+            function type() {
+                if (index < textToType.length) {
+                    typingText.innerHTML += textToType.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+            type();
+
+            // Skills Chart
+            const ctx = document.getElementById('skillsChart');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'MS Excel / Google Sheets', 
+                        'Data Entry Accuracy', 
+                        'Web Research', 
+                        'Time Management', 
+                        'Communication', 
+                        'CRM Software'
+                    ],
+                    datasets: [{
+                        label: 'Proficiency Level',
+                        data: [95, 98, 90, 95, 92, 85],
+                        backgroundColor: 'rgba(224, 122, 95, 0.2)',
+                        borderColor: 'rgba(224, 122, 95, 1)',
+                        pointBackgroundColor: 'rgba(224, 122, 95, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(224, 122, 95, 1)'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: '#e2e8f0'
+                            },
+                            grid: {
+                                color: '#e2e8f0'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 14,
+                                    family: "'Inter', sans-serif"
+                                },
+                                color: '#3d405b'
+                            },
+                            ticks: {
+                                backdropColor: '#fdfdfc',
+                                color: '#81b29a',
+                                stepSize: 20
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                           display: false
+                        }
+                    }
+                }
+            });
+
+            // Smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                         if(mobileMenu.classList.contains('hidden') === false){
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
